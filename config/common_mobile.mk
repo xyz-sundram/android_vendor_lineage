@@ -3,9 +3,7 @@ $(call inherit-product, vendor/lineage/config/common.mk)
 
 # Apps
 PRODUCT_PACKAGES += \
-    Backgrounds \
-    ExactCalculator \
-    Jelly
+    Backgrounds
 
 ifeq ($(PRODUCT_TYPE), go)
 PRODUCT_PACKAGES += \
