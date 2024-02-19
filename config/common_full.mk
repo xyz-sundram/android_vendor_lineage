@@ -7,6 +7,8 @@ PRODUCT_SIZE := full
 $(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
 $(call inherit-product-if-exists, external/google-fonts/rubik/fonts.mk)
 
+TARGET_INCLUDES_LINEAGE_PREBUILTS ?= false
+ifeq ($(TARGET_INCLUDES_LINEAGE_PREBUILTS),true)
 # Apps
 PRODUCT_PACKAGES += \
     Eleven \
@@ -14,7 +16,9 @@ PRODUCT_PACKAGES += \
     Profiles \
     Recorder \
     Seedvault
+endif
 
+PRODUCT_NO_CAMERA ?= true
 ifneq ($(PRODUCT_NO_CAMERA),true)
 PRODUCT_PACKAGES += \
     Aperture
