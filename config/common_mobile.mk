@@ -9,8 +9,7 @@ include vendor/lineage/config/lineage_audio.mk
 
 # Apps
 PRODUCT_PACKAGES += \
-    Backgrounds \
-    Glimpse
+    Backgrounds
 
 ifeq ($(PRODUCT_TYPE), go)
 PRODUCT_PACKAGES += \

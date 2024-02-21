@@ -15,7 +15,8 @@ PRODUCT_PACKAGES += \
     Etar \
     Profiles \
     Recorder \
-    Seedvault
+    Seedvault \
+    Glimpse
 endif
 
 PRODUCT_NO_CAMERA ?= true
