@@ -8,6 +8,11 @@ $(if $(USE_DEVICE_SPECIFIC_$(1)), \
 $(call project-set-path,qcom-$(2),$(strip $(path)))
 endef
 
+# Allow a device to manually override which HALs it wants to use
+ifneq ($(OVERRIDE_QCOM_HARDWARE_VARIANT),)
+    QCOM_HARDWARE_VARIANT := $(OVERRIDE_QCOM_HARDWARE_VARIANT)
+endif
+
 ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
 
 $(call set-device-specific-path,AUDIO,audio,hardware/qcom-caf/$(QCOM_HARDWARE_VARIANT)/audio)
